@@ -5,9 +5,9 @@ body{
     background-color: #ff7f50;
     margin: 0;
     padding: 0;
-    background: linear-gradient(#3f37c0, #7209b7);
+    background: linear-gradient(#0590ec, #b4b709);
 }
-.container{
+.container b{
     margin: 50px auto;
     width: 400px;
     padding: 30px;
