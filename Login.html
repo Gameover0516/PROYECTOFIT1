@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles/login.css">
 </head>
-<body>
+<body><center>
     <a href="Pagina principal.html">Regresar</a>
     <div class = "container"> </div>
     <h2>Login</h2>
-    <form id="formulariologin" name="formulario" method="GET">
+    <form id="formulariologin">
         <div class="elementos">
             <label for="login">Login</label>
             <input type="text" id="login" name="login" required="true"><br>
@@ -19,12 +20,31 @@
             <label for="password">password</label>
             <input type="password" id="password" name="password" required="true"><br>
         </div>
-        
-        <div class="elemento">
-            <input type="submit" value="Enviar">
-            <a  href="listasytablas.html">ir a listas</a>
-
         </div>
     </form>
-</body>
+    <button onclick = "mostrarvalores()"> ENTRAR</button>
+    <br>
+    <br>
+    <div id="valores"> </div>
+    <script>
+        function mostrarvalores(){
+            const formulariologin = document.forms['formulariologin']
+            let text = ''
+            for(item of formulariologin){
+                text += item.value + ' '
+            }
+            console.log(text)
+            document.getElementById('valores').innerHTML = text
+        }
+        const form1 = document.getElementById("formulariologin")
+        form1.addEventListener("focus", (event)=>{
+            event.target.style.background = "blue"
+        }, true)
+        form1.addEventListener("blur", (event)=>{
+            event.target.style.background = "white"
+        }, true)
+    </script>
+<a href="http://127.0.0.1:5500/listado/index.html">Registro de Alumnos</a>
+
+</body></center>
 </html>
