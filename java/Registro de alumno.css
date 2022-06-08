@@ -6,19 +6,33 @@ html{
     linear-gradient(to left rgb(255, 60, 0), rgb(206, 250, 13));
 }
 h1{
-    color: aliceblue;
+    color: hsl(323, 81%, 51%);
     padding: 10px;
 }
 .contenedor{
     max-width: 400px;
     margin: 50px auto;
-    background: rgb(228, 0, 178);
+    background: rgb(0, 228, 49);
     border-radius: 5px;
     box-shadow: 5px 5px 15px -5px rgb(179, 226, 8);
+    text-align: center;
 }
 .elemento{
     min-height: 70%;
     display:flex;
     align-items: center;
     border-bottom: 1px solid rgb(197, 197, 197);
+}
+.h7{
+    color: #e7d20e;
+    padding: 10px;
+}
+.h7{
+    max-width: 400px;
+    margin: 50px auto;
+    background: rgb(0, 228, 49);
+    border-radius: 2px;
+    box-shadow: 5px 0px 15px 0px rgb(179, 226, 8);
+    float: left;
+
 }
