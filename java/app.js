@@ -10,7 +10,7 @@ function mostrarEstudiantes(){
     }
     document.getElementById("alumnos").innerHTML = texto
 }
-function arregloEstudiante(){
+function agregarEstudiante(){
     const formulario = document.forms["formulario"]
     const nombre = formulario["nombre"]
     const apellido = formulario["apellido"]

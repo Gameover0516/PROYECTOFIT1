@@ -1,4 +1,4 @@
-class Estudiante{
+class Estudiante  {
     constructor(nombre, apellido, carrera){
         this._nombre=nombre
         this._apellido=apellido

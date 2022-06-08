@@ -11,7 +11,7 @@
 
 </body>
 <H1>REGISTRO</H1>
-<form>
+<form id="formularioregistro">
     <label for="numero">Numero aspirante</label><br>
     <input type="number" id="numero" placeholder="Numero de aspirante"><br>
     <label>Nombre: </label><br>
@@ -27,8 +27,24 @@
     <label>Sexo:</label><br>
     <input type="radio" name= "Sexo">Masculino <br>
     <input type="radio" name= "Sexo">Femenino <br>
-    <input type="submit">
-    <a  href="listasytablas.html">ir a listas</a>
-
+    <script>
+        function mostrarvalores(){
+            const formularioregistro = document.forms['formularioregistro']
+            let text = ''
+            for(item of formularioregistro){
+                text += item.value + ' '
+            }
+            console.log(text)
+            document.getElementById('valores').innerHTML = text
+        }
+        const form1 = document.getElementById("formularioregistro")
+        form1.addEventListener("focus", (event)=>{
+            event.target.style.background = "blue"
+        }, true)
+        form1.addEventListener("blur", (event)=>{
+            event.target.style.background = "white"
+        }, true)
+    </script>
+    <a  href="listasytablas.html">consulta con los siguientes contactos</a>
 </form>
 </html>
