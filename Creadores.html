@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creadores</title>
+    <style>
+        .azul{
+            color: blue;
+        }
+    </style>
+</head>
+<link rel="stylesheet" href="Creadores.css">
+<a href="Pagina principal.html">Regresar</a>
+
+<body>
+    <h1 id="encabezado" class="azul">TecNM - Campus Instituto Tecnológico Superior de Coatzacoalcos</h1>
+    <p id="parrafo1" class="azul">Desarrollo aplicaciones web</p>
+    <p id="parrafo2" class="azul">Docente: Alberto Israel Castellanos Reyes</p>
+    <p id="parrafo3" class="azul">Ingenieria informatica</p>
+    <p id="parrafo4" class="azul">Alumnos</p>
+    <p id="parrafo5" class="azul">Alam Jair Ramirez Velazquez</p>
+    <p id="parrafo6" class="azul">Valeria del Carmen Perez Contreras</p>
+    <script>
+        console.log("Bienvenidos a javascript")
+        const encabezadoH1 = document.getElementById('encabezado')
+        const { innerHTML} = encabezadoH1
+        console.log(encabezadoH1)
+        console.log('Inner: ' + innerHTML)
+        console.log('----------------------------------------------')
+        const parrafo1 = document.getElementById('parrafo1')
+        console.log('PARRAFO1: ' + parrafo1.innerHTML)
+        console.log(`valor del encabezado: ${encabezadoH1.innerHTML} y el valor del parrafo 1 es: ${parrafo1.innerHTML}`)
+        parrafo1.innerHTML += ' TECM '
+        console.log(`El valor del parrafo1 modificado es ${parrafo1.innerHTML}`)
+        console.log('---------------------------------------------')
+        const parrafos = document.getElementsByTagName('p')
+        console.log(`numero de parrafos: ${parrafos.length}`)
+        for(let i= 0; i < parrafos.length; i++){
+            console.log(`En el parrafo ${i+1} el valor es: ${parrafos[i].innerHTML}`)
+        }
+        console.log ('-----------------------------------)')
+        const elementsByClass = document.getElementsByClassName("azul")
+        console.log(`numero de elemetos de la clase azul: ${elementsByClass.length}`)
+        for(let i = 0; i < elementsByClass.length; i++){
+            console.log(`valor del elemento: ${elementsByClass[i].innerHTML}`)
+        }
+        
+    </script>
+</body>
+</html> 
