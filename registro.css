@@ -1,0 +1,13 @@
+body{
+    background-color: rgb(255, 0, 106);
+}
+.ex1 b{
+    margin: auto;
+    background-color: rgb(8, 177, 255);
+    width: 60;
+}
+form{
+    margin: 20px 0px 0 -20px;
+    background-color: rgba(203, 248, 0, 0.986);
+    width: 70;
+}
