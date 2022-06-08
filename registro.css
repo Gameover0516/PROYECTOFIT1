@@ -1,13 +1,23 @@
 body{
-    background-color: rgb(255, 0, 106);
+    height: 100px;
+    background-image: url(https://i.pinimg.com/236x/c4/a3/6b/c4a36bfda0f98f862a8117b3fdf90cf2.jpg); 
 }
 .ex1 b{
     margin: auto;
-    background-color: rgb(8, 177, 255);
+    background-color: #1808ff);
     width: 60;
+    
 }
 form{
-    margin: 20px 0px 0 -20px;
-    background-color: rgba(203, 248, 0, 0.986);
-    width: 70;
+    width: 350px;
+    height: 150px;
+    display: table;
+    text-align: center;
+    background-color: #c7fc07fb;
+    width: 400;
+}
+
+.H1{
+   color: #1808ff;
+
 }

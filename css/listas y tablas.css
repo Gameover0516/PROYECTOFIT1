@@ -41,7 +41,7 @@ tr:nth-child(even){
     background-color: darkmagenta;   
 }
 tr:nth-child(odd){
-    background-color: blue;
+    background-color: rgb(0, 255, 242);
 }
 ol {
     list-style: none;
