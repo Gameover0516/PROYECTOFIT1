@@ -1,4 +1,4 @@
-class ingreso extends registro{
+class registro extends registro{
     static idingreso = 1234
     constructor(descripcion, valor){
         super(descripcion,valor)

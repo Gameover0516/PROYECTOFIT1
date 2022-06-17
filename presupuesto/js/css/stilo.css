@@ -9,26 +9,31 @@
     clear: both;
 }
 body{
-    color: blue;
+    color: rgb(7, 6, 10);
     font-family: sans-serif;
-    font-size: 18px;
+    font-size: 20px;
     position: relative;
     height: 100vh;
     font-weight: 400;
 }
-.right{ float: right}
+.right{ 
+    float: right;
+}
 
 .cabecera{
-    height: 40vh;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiNSH0VkNxwBYptG2G0WBL8vEVnyUHRtz0Fw&usqp=CAU);
+    background-color: tomato;
+    height: 50vh;
     background-size: cover;
     background-position: center;
     position: relative;
-    width: 100%;
+    width: 200px
     padding-top: 15px;
     padding-bottom:100px;
-    color: rgb(74, 2, 243);
+    color::backdrop;
     background: url(), #7b4397;
-    background: url(), -webkit-gradient(linear, right top, left top, from(#7b4397), to(#dc2430))
+    
+    
 }
 
 .presupuesto {
@@ -41,10 +46,11 @@ body{
 }
 
 .presupuesto_titulo {
-    font-size: 20%;
+    font-size: 100%;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
     font-weight: 300;
+    background: #7b4397;
 }
 .presupuesto_valor {
     font-weight: 300;
@@ -59,10 +65,11 @@ body{
 }
 .presupuesto_ingreso{
     margin-bottom: 10px;
-    background-color: aqua;
+    background-color: rgb(76, 0, 255);
 }
 .presupuesto_egreso{
-    background-color: #c8ff00;
+    margin-bottom: 10px;
+    background-color: #002aff;
 }
 .presupuesto_ingreso--texto, .presupuesto_egreso--texto{
     float: left;
@@ -101,8 +108,8 @@ body{
     font-weight: 300;
     transition: border 0.3s;
 }
-.agregar_descripcion,.agregar_valor{
-    border: 1px solid aquamarine;
+.NOMBRE,.agregar_folio{
+    border: 1px solid rgb(133, 255, 127);
     background-color: black;
     color: #c8ff00;
     font-family: inherit;
@@ -114,9 +121,9 @@ body{
 }
 .agregar_btn{
     font-size: 35px;
-    background: #c8ff00;
+    background: #ffff00;
     border: none;
-    color: #7b4397;
+    color: #000000;
     cursor: pointer;
     display: inline-block;
     vertical-align: middle;
@@ -124,8 +131,10 @@ body{
     margin-left: 10px;
 }
 .contenedor{
-    width: 860px;
-    margin: 60px auto;
+    background-color:coral;
+    text-align:center;
+    width: 850px;
+    margin: 40px auto;
 }
 .ingreso{
     float: left;
@@ -139,21 +148,21 @@ body{
     margin-bottom: 15px;
 }
 .ingreso_titulo{
-    color: #c8ff00;
+    color: #bf00ff;
 }
 .elemento{
     padding: 13px;
     border-bottom: 1px solid #dc2430;
 }
 .elemento:first-child{border-top: 1px solid #7b4397;}
-.elemento:nth-child(even){background-color: darkblue;}
 .elemento_descripcion{float: left;}
 .elemento_valor{
-    float: left;
+    text-align:center;
+    float:inline-start;
     transition: 0.3s;
 }
 .ingreso.elemento_valor, .ingreso.elemento_eliminar-btn{
-    color: #c8ff00;
+    color: #effc01;
 }
 .elemento_eliminar{float: left;}
 .elemento_eliminar-btn{
@@ -169,3 +178,7 @@ body{
 .elemento_eliminar-btn:focus{outline:none;}
 .elemento_eliminar-btn:active{transform: translateY(2px);}
 .elemento:hover .elemento_valor{transform: translateX(-20px);}
+
+.folio{
+
+}

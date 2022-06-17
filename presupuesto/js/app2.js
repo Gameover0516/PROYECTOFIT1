@@ -1,67 +1,79 @@
-const ingresos = [
-    new ingreso ('renta', 1300),
-    new ingreso ('membresia', 823),
-    new ingreso ('canto', 946)
+const folio = [
+    new folio ('FOLIOS INGRESADOS', 7800),
+
 ]
-const egresos = [
-    new egreso  ('pago', 1100),
-    new egreso ('gastos', 1600),
+const aprobados = [
+    new aprobados  ('aprobados', 1100),
+
 ]
 let cargarappp = () => {
     cargarcabecera()
     cargaringresos()
 }
-let totalingresos = () => {
-    let totalingresos = 0
-    for (let ingreso of ingresos) {
-        console.log(ingreso.valor)
-        totalingresos += ingreso.valor
+let totalfolio = () => {
+    let totalfolio = 0
+    for (let folio of folio) {
+        console.log(folio.valor)
+        totalingresos += folio.valor
     }
-    return totalingresos
+    return totalfolio
 }
-let totalegresos = () => {
-    let totalegresos = 0
-    for (let egreso of egresos){
-        console.log(egreso.valor)
-        totalegresos += egreso.valor
+let totalaprobados = () => {
+    let totalaprobados = 0
+    for (let aprobados of aprobados){
+        console.log(aprobados.valor)
+        totalaprobados += aprobados.valor
     }
-    return totalegresos
+    return totalaprobados
 }
 let cargarcabecera = () => {
     console.log('************************')
-    let presupuesto = totalingresos() - totalegresos()
+    let presupuesto = totalfolio() - totalaprobados()
     console.log(presupuesto)
-    let porcentajeegresos = totalegresos() / totalingresos()
+    let porcentajefolio = totalfolio() / totalaprobados()
     console.log(porcentajeegresos)
     document.getElementById('presupuesto').innerHTML = presupuesto
-    document.getElementById('porcentaje').innerHTML = porcentajeegresos
+    document.getElementById('porcentaje').innerHTML = porcentajefolio
 }
-const cargaringresos = () =>{ 
-    let ingresosHTML = ''
-    for(let ingreso of ingresos){
-        ingresosHTML += crearingresoHTML(ingreso)
+const cargarfolio = () =>{ 
+    let folioHTML = ''
+    for(let folio of folio){
+        folioHTML += crearfolioHTML(folio)
     }
-    document.getElementById('lista-ingresos').innerHTML = ingresosHTML
+    document.getElementById('lista-folio').innerHTML = folioHTML
 }
-const crearingresoHTML = (ingresos) => {
+const crearfolioHTML = (folio) => {
     let ingresosHTML= `
     <div class="elemento limpiarestilos">
     <div class="elemeto_descripcion">${ingresos.descripcion}</div>
     <div class="derecha limpiarestilos">
-        <div class="elemento_valor">${ingreso.valor}</div>
+        <div class="elemento_folio">${ingreso.folio}</div>
         <div class="elemento_eliminar">
             <button class="elemento_eliminar-btn">
                 <ion-icon name="close-circle-outline" 
-                    onclick = 'eliminaringreso(${ingreso.id})'></ion-icon>
+                    onclick = 'eliminarfolio(${folio.id})'></ion-icon>
             </button>
         </div>
     </div>
 </div>`
     return ingresoHTML
 }
-const eliminaringresos = (id) => {
-    let indiceeliminar = ingresos.findIndex (ingreso => ingreso.id === id)
-    ingresos.splice(indiceeliminar,1)
+const eliminaraprobados = (id) => {
+    let indiceeliminar = aprobados.findIndex (aprobados => aprobados.id === id)
+    aprobados.splice(indiceeliminar,1)
     cargarcabecera()
     cargaringresos()
+}
+
+let agregarDato = () => {
+    let form = document.form['form']
+    let tipo = form['tipo']
+    let agregar = from['agregar']
+    let nombre = form['nombre']
+    let folio = form['folio']
+    if (tipo.value == 'folio'){
+        folio.push(new folio(nombre.value, +folio.value))
+        cargarcabecera()
+        cargaringresos()
+    }
 }
