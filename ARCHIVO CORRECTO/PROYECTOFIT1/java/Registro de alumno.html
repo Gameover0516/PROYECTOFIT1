@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de alumnos</title>
+    <link rel="stylesheet" href="Registro de alumno.css">
+</head>
+<body onload="mostrarEstudiantes()">
+    <div class="h7">
+        <a href="http://127.0.0.1:5501/Login.html">Regresar</a> 
+     </div>
+    <div class="contenedor" id="encabezado">
+        <h1>Lista de Registro</h1>
+    </div>
+    <div class="contenedor">
+        <div class="elemento">
+            <ul id="alumnos">
+                <li>Alam Jair Ramirez Velazquez</li>
+                <li>Valeria del Carmen Perez Contreras</li>
+                <li>Sofia Natalia Echeverria </li> 
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div class="contenedor">
+            <div style="text-align: center;">
+                <button style="cursor: pointer" 
+                    onclick="agregarEstudiante()">
+                REGISTRAR
+                </button>
+            </div>
+            <form id="formulario">
+                <input type="text", id="nombre" placeholder="Nombre">
+                <input type="text", id="apellido" placeholder="Apellido">
+               <center><input type="text", id="carrera", placeholder="Carrera"></center>
+            </form>
+        </div>
+    <script src="estuidante.js"> </script>
+    <script src="app.js"></script>
+</body>
+</html>
