@@ -1,7 +1,7 @@
 class registro{
     constructor(descripcion,valor){
         this._descripcion = descripcion
-        this.folio = this.folio
+        this._valor = valor
     }
     get descripcion(){
         return this._descripcion
@@ -9,11 +9,10 @@ class registro{
     set descripcion(descripcion){
         this._descripcion = descripcion
     }    
-    get folio(){
-        return this.folio
+    get valor(){
+        return this._valor
     }
-    set folio(valor){
-        this._folio = folio
+    set valor(valor){
+        this._valor = valor
     }
 }
-    

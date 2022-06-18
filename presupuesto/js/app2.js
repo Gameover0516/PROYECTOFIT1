@@ -1,78 +1,77 @@
-const folio = [
-    new folio ('FOLIOS INGRESADOS', 7800),
-
+const ingresos = [
+    new ingreso ('renta', 1300),
+    new ingreso ('membresia', 823),
+    new ingreso ('canto', 946)
 ]
-const aprobados = [
-    new aprobados  ('aprobados', 1100),
-
+const egresos = [
+    new egreso  ('pago', 1100),
+    new egreso ('gastos', 1600),
 ]
 let cargarappp = () => {
     cargarcabecera()
     cargaringresos()
 }
-let totalfolio = () => {
-    let totalfolio = 0
-    for (let folio of folio) {
-        console.log(folio.valor)
-        totalingresos += folio.valor
+let totalingresos = () => {
+    let totalingresos = 0
+    for (let ingreso of ingresos) {
+        console.log(ingreso.valor)
+        totalingresos += ingreso.valor
     }
-    return totalfolio
+    return totalingresos
 }
-let totalaprobados = () => {
-    let totalaprobados = 0
-    for (let aprobados of aprobados){
-        console.log(aprobados.valor)
-        totalaprobados += aprobados.valor
+let totalegresos = () => {
+    let totalegresos = 0
+    for (let egreso of egresos){
+        console.log(egreso.valor)
+        totalegresos += egreso.valor
     }
-    return totalaprobados
+    return totalegresos
 }
 let cargarcabecera = () => {
     console.log('************************')
-    let presupuesto = totalfolio() - totalaprobados()
+    let presupuesto = totalingresos() - totalegresos()
     console.log(presupuesto)
-    let porcentajefolio = totalfolio() / totalaprobados()
-    console.log(porcentajeegresos)
-    document.getElementById('presupuesto').innerHTML = presupuesto
-    document.getElementById('porcentaje').innerHTML = porcentajefolio
+    let porcentajeegreso = totalegresos() / totalingresos()
+    console.log(porcentajeegreso)
+    document.getElementById('presupuesto').innerHTML = formatomoneda(presupuesto)
+    document.getElementById('porcentaje').innerHTML = formatoporcentaje(porcentajeegreso)
 }
-const cargarfolio = () =>{ 
-    let folioHTML = ''
-    for(let folio of folio){
-        folioHTML += crearfolioHTML(folio)
+const cargaringresos = () =>{ 
+    let ingresosHTML = ''
+    for(let ingreso of ingresos){
+        ingresosHTML += crearingresoHTML(ingreso)
     }
-    document.getElementById('lista-folio').innerHTML = folioHTML
+    document.getElementById('lista-ingresos').innerHTML = ingresosHTML
 }
-const crearfolioHTML = (folio) => {
+const crearingresoHTML = (ingresos) => {
     let ingresosHTML= `
     <div class="elemento limpiarestilos">
     <div class="elemeto_descripcion">${ingresos.descripcion}</div>
     <div class="derecha limpiarestilos">
-        <div class="elemento_folio">${ingreso.folio}</div>
+        <div class="elemento_valor">${ingreso.valor}</div>
         <div class="elemento_eliminar">
             <button class="elemento_eliminar-btn">
                 <ion-icon name="close-circle-outline" 
-                    onclick = 'eliminarfolio(${folio.id})'></ion-icon>
+                    onclick = 'eliminaringreso(${ingreso.id})'></ion-icon>
             </button>
         </div>
     </div>
 </div>`
-    return ingresoHTML
+return ingresosHTML
 }
-const eliminaraprobados = (id) => {
-    let indiceeliminar = aprobados.findIndex (aprobados => aprobados.id === id)
-    aprobados.splice(indiceeliminar,1)
+const eliminaringresos = (id) => {
+    let indiceeliminar = ingresos.findIndex (ingreso => ingreso.id === id)
+    ingresos.splice(indiceeliminar,1)
     cargarcabecera()
     cargaringresos()
 }
-
-let agregarDato = () => {
-    let form = document.form['form']
-    let tipo = form['tipo']
-    let agregar = from['agregar']
-    let nombre = form['nombre']
-    let folio = form['folio']
-    if (tipo.value == 'folio'){
-        folio.push(new folio(nombre.value, +folio.value))
+let agregardato = () =>{
+    let form = document.forms ['form']
+    let tipo = form ['tipo']
+    let descripcion = form ['descripcion']
+    let valor = form ['valor']
+    if (tipo.value == 'ingreso'){
+        ingresos.push(new ingreso (descripcion.value, +valor.value))
         cargarcabecera()
         cargaringresos()
     }

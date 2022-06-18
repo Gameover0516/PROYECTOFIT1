@@ -7,56 +7,57 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/stilo.css">
 </head>
-<body onload="cargarappp()">
+<center><body onload="cargarappp()">
     <div class="cabecera">
         <div class="presupuesto">
-            <div class="presupuesto_titulo">INGRESO A SOLICITUDES.</div>
+            <div class="presupuesto_titulo">INGRESO A SOLICITUDES</div>
             <div class="presupuesto_valor" id="presupuesto">2000.00</div>
             <div class="presupuesto_ingreso limpiarestilo">
-                <div class="presupuesto_folio--texto">folio</div>
+                <div class="presupuesto_ingreso--texto">FOLIO</div>
                 <div class="right">
-                    <div class="presupuesto_folio--valor" id="folio">+900</div>
-                    <div class="presupuesto_folio--porcentaje">&nbsp;</div>
+                    <div class="presupuesto_ingreso--valor" id="ingresos">+3,000.00</div>
+                    <div class="presupuesto_ingreso--porcentaje">&nbsp;</div>
                 </div>
+            <div>
 
-
+            </div>
             </div>
             <div class="presupuesto_egreso limpiarestilo">
                 <div class="presupuesto_engreso--texto">APROBADOS</div>
                 <div class="right">
-                    <div class="presupuesto_egreso--valor" id="APROBADOS">10</div>
+                    <div class="presupuesto_egreso--valor" id="egresos">-1,000.00</div>
+                    <div class="presupuesto_egreso--porcentaje" id = "porcentaje">40%</div>
                 </div>
             </div>
         </div>
     </div>
     <form id="form" onsubmit = "return false">
-        <div class="agregar">
+        <div class="agegregar">
             <div class="agregar_contenedor">
                 <select class="agregar_tipo" id="tipo">
-                    <option value="NOMBRE" selected>+</option>
-                    <option value="folio">-</option>
+                    <option value="ingreso" selected>+</option>
+                    <option value="egreso">-</option>
                 </select>
-                <input type="text" class="NOMBRE"
-                    placeholder="NOMBRE" id="NOMBRE">
-                <input type="number" class="agregar_folio"
-                    placeholder="folio" id="folio">
-                <button class="agregar_btn" onclick="agregarDato()">
-                    <ion-icon name="checkmark-circle-outline"></ion-icon>
-                </button>  
+                <input type="text" class="agregar_descripcion"
+                placeholder="agrgar descripcion" id="descripcion">
+                <input type="number" class="agregar_valor"
+                placeholder="valor" id="valor">
+                <button class="agregar_btn" onclick="agregardato()"></button>
+                <ion-icon name="checkmark-circle-outline"></ion-icon>
             </div>
         </div>
     </form>
     <div class="contenedor limpiarestilos">
-        <div class="REGISTRO">
-            <h2 class="REGISTRO_titulo">REGISTROS</h2>
-            <div id="lista-REGISTRO">
+        <div class="ingreso">
+            <h2 class="ingreso_titulo">REGISTROS</h2>
+            <div id="lista-ingresos">
                 <div class="elemento limpiarestilos">
                     <div class="elemeto_descripcion">APROBADOS</div>
                     <div class="derecha limpiarestilos">
-                        <div class="elemento_valor">+5800.00</div>
+                        <div class="elemento_valor">+5000.00</div>
                         <div class="elemento_eliminar">
                             <button class="elemento_eliminar-btn">
-                                <ion-icon name="close-circle-outline"></ion-icon>  
+                                <ion-icon name="close-circle-outline"></ion-icon>
                             </button>
                         </div>
                     </div>
@@ -72,16 +73,12 @@
                         </div>
                     </div>
                 </div>
-                      </button>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
-    </div>
-    <script src="registro.js"></script>
-    <script src="folio.js"></script>
-    <script src="APROBADOS.js"></script>
+    </div></center>
+    ce<script src="registro.js"></script>
+    <script src="ingreso.js"></script>
+    <script src="egreso.js"></script>
     <script src="app2.js"></script>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </body>
