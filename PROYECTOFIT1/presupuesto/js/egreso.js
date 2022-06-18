@@ -1,8 +1,8 @@
-class egreso extends registro{
-    static idegreso = 2345
+class agregarDato extends nombre{
+    static idnombre = 2345
     constructor(descripcion, valor){
         super(descripcion,valor)
-        this._id = ++egreso.idingreso
+        this._id = ++nombre.idnombre
     }
     get id(){
         return this._id

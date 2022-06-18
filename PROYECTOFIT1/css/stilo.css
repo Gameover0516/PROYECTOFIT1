@@ -9,28 +9,28 @@
     clear: both;
 }
 body{
-    color: rgb(7, 6, 10);
+    color: rgba(59, 251, 0, 0.99);
     font-family: sans-serif;
     font-size: 20px;
     position: relative;
     height: 100vh;
     font-weight: 400;
 }
-.right{ 
-    float: right;
-}
+.right{ float: right}
 
 .cabecera{
-    background-color: tomato;
+    color: #000000;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiNSH0VkNxwBYptG2G0WBL8vEVnyUHRtz0Fw&usqp=CAU);
+    background-color: rgb(219, 235, 0);
     height: 50vh;
     background-size: cover;
     background-position: center;
     position: relative;
-    width: 200px
-    padding-top: 15px;
-    padding-bottom:100px;
-    color::backdrop;
-    background: url(), #7b4397;
+    width: 1750px;
+    padding-top: 200px;
+    padding-bottom:000px;
+    color: rgb(255, 132, 0);
+    background: url(), #ff00fb;
     
 }
 
@@ -40,7 +40,7 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    color: rgb(252, 250, 246);
+    color: rgb(0, 0, 0);
 }
 
 .presupuesto_titulo {
@@ -63,11 +63,11 @@ body{
 }
 .presupuesto_ingreso{
     margin-bottom: 10px;
-    background-color: rgb(76, 0, 255);
+    background-color: rgb(170, 255, 0);
 }
 .presupuesto_egreso{
     margin-bottom: 10px;
-    background-color: #002aff;
+    background-color: rgb(170, 255, 0);
 }
 .presupuesto_ingreso--texto, .presupuesto_egreso--texto{
     float: left;
@@ -82,18 +82,19 @@ body{
     margin-left: 10px;
 }
 .presupuesto_egreso--porcentaje{
-    background-color: rgba(0, 0, 0, 0.884);
+    background-color: rgba(157, 255, 0, 0.884);
     text-align: center;
     border-radius: 3px;
 }
 .agregar {
-    padding: 14px;
+    padding: 50px;
     border-bottom: 1px solid #c8ff00;
-    background-color: aqua;
+    background-color: rgb(0, 38, 255);
 }
 .agregar_contenedor{
-    margin: 0 auto;
+    margin: auto;
     text-align: center;
+    width: center;
 }
 .agregar_tipo {
     width: 55px;
@@ -106,8 +107,8 @@ body{
     font-weight: 300;
     transition: border 0.3s;
 }
-.NOMBRE,.agregar_folio{
-    border: 1px solid rgb(133, 255, 127);
+.agregar_descripcion,.agregar_valor{
+    border: 1px solid aquamarine;
     background-color: black;
     color: #c8ff00;
     font-family: inherit;
@@ -119,9 +120,9 @@ body{
 }
 .agregar_btn{
     font-size: 35px;
-    background: #ffff00;
+    background: #000000;
     border: none;
-    color: #000000;
+    color:#1900ff;
     cursor: pointer;
     display: inline-block;
     vertical-align: middle;
@@ -129,14 +130,13 @@ body{
     margin-left: 10px;
 }
 .contenedor{
-    background-color:coral;
-    text-align:center;
-    width: 850px;
-    margin: 40px auto;
+    background-color: coral;
+    width: 500PX;
+    margin: 40px;
 }
 .ingreso{
     float: left;
-    width: 370px;
+    width: 600px;
     margin-right: 70px;
 }
 .h2{
@@ -146,21 +146,22 @@ body{
     margin-bottom: 15px;
 }
 .ingreso_titulo{
-    color: #bf00ff;
+    color: #1900ff;
 }
 .elemento{
     padding: 13px;
-    border-bottom: 1px solid #dc2430;
+    border-bottom: 1px solid #f4f7f7;
 }
 .elemento:first-child{border-top: 1px solid #7b4397;}
+.elemento:nth-child(even){background-color: darkblue;}
 .elemento_descripcion{float: left;}
 .elemento_valor{
-    text-align:center;
-    float:inline-start;
+    text-align: center;
+    float: inline-end;
     transition: 0.3s;
 }
 .ingreso.elemento_valor, .ingreso.elemento_eliminar-btn{
-    color: #effc01;
+    color: #0026ff;
 }
 .elemento_eliminar{float: left;}
 .elemento_eliminar-btn{
@@ -176,7 +177,3 @@ body{
 .elemento_eliminar-btn:focus{outline:none;}
 .elemento_eliminar-btn:active{transform: translateY(2px);}
 .elemento:hover .elemento_valor{transform: translateX(-20px);}
-
-.folio{
-
-}

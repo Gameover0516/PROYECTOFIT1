@@ -1,11 +1,11 @@
 const ingresos = [
-    new ingreso ('aprobado', 1300),
-    new ingreso ('folio registrados', 823),
+    new INGRESO ('APROBADOS',8998),
+    new INGRESO ('FOLIOS INGRESADOS',8223),
     
 ]
 const egresos = [
-    new egreso  ('aprobado', 1100),
-    new egreso ('folio registrados', 1600),
+    new egreso  ('APROBADOS', 1100),
+    new egreso ('FOLIOS INGRESADOS', 1600),
 ]
 let cargarappp = () => {
     cargarcabecera()
@@ -34,7 +34,7 @@ const formatoMoneda = (valor) => {
     return valor.toLocaleString('en-US', {style:'percent', minimumFractionDigits:2})
 }
 let cargarcabecera = () => {
-    console.log('********')
+    console.log('************************')
     let presupuesto = totalingresos() - totalegresos()
     console.log(presupuesto)
     let porcentajeegreso = totalegresos() / totalingresos()
