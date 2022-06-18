@@ -1,0 +1,31 @@
+html{
+    background-color: #1b1bd8;
+    min-height: 1000px;
+    font-family: "helvetica neue";
+    background: url(), 
+    linear-gradient(to left rgb(255, 60, 0), rgb(206, 250, 13));
+}
+.h1{
+    color: aliceblue;
+    padding: 10px;
+    text-shadow: 0 1px 0 rgba(red, green, blue, alpha);
+    max-width: 400px;
+    margin: 50px auto;
+    background:hsl(180, 87%, 48%);
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -5px #1608e2;
+}
+.contenedor{
+    max-width: 400px;
+    margin: 50px auto;
+    background: rgb(172, 21, 139);
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -5px rgb(77, 10, 202);
+}
+.elemento{
+    min-height: 70%;
+    display:flex;
+    align-items: center;
+    border-bottom: 1px solid rgb(197, 197, 197);
+    }
+

@@ -1,0 +1,23 @@
+html {
+    height: 100%;
+
+    margin: 15px;
+    background:#fa06d1;
+    border-radius: 15px 0px;
+    box-shadow: 5px 5px 15px -5px #e20808;
+}
+body{
+    margin: 50%;
+    padding: 0;
+    background: linear-gradient(#3f37c0, #7209b7);
+}
+.container{
+    margin: 50px auto;
+    width: 400px;
+    padding: 30px;
+    background: rgba(0, 0, 0,.5);
+    border-radius: 10px;
+
+
+}
+     

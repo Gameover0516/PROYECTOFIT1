@@ -1,0 +1,46 @@
+html {
+    height: 10px;
+
+    background-image: url(OIP.jpg); 
+}
+body{
+    background-color: #5096ff;
+    margin: 100px;
+    padding: 50;
+    background: linear-gradient(hsl(303, 100%, 50%), #f303f3);
+
+    margin: 5px;
+    background:#fa06d1;
+    border-radius: 15px 0px;
+    box-shadow: 5px 5px 15px -5px #e20808;
+
+    
+
+}
+.container b{
+    margin: 50px auto;
+    width: 400px;
+    padding: 30px;
+    background: rgba(0, 0, 0,.5);
+    border-radius: 10px;
+    
+}
+
+body{
+    color: aliceblue;
+    padding: 10px;
+    text-shadow: 0 1px 0 rgba(red, green, blue, alpha);
+    max-width: 400px;
+    margin: 50px auto;
+    background:hsl(180, 87%, 48%);
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -5px #1608e2;
+}
+
+h2{
+    color: #0263f5;
+    font-size: 80px;   
+    margin-top: auto;
+    color: #075fe4;
+    max-width: 400px;
+}
