@@ -27,15 +27,22 @@ let totalegresos = () => {
     }
     return totalegresos
 }
+const formatoMoneda = (valor) => {
+    return valor.toLocaleString('en-US', {style:'currency', currency: 'USD', minimumFractionDigits:2})
+}
+  const formatoPorcentaje = (valor) => {
+    return valor.toLocaleString('en-US', {style:'percent', minimumFractionDigits:2})
+}
 let cargarcabecera = () => {
     console.log('************************')
     let presupuesto = totalingresos() - totalegresos()
     console.log(presupuesto)
     let porcentajeegreso = totalegresos() / totalingresos()
     console.log(porcentajeegreso)
-    document.getElementById('presupuesto').innerHTML = formatomoneda(presupuesto)
-    document.getElementById('porcentaje').innerHTML = formatoporcentaje(porcentajeegreso)
+    document.getElementById('presupuesto').innerHTML = formatoMoneda(presupuesto)
+    document.getElementById('porcentaje').innerHTML = formatoPorcentaje(porcentajeegreso)
 }
+
 const cargaringresos = () =>{ 
     let ingresosHTML = ''
     for(let ingreso of ingresos){
